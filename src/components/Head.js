@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "../assets/images/logo.png";
+import { NavLink } from "react-router-dom";
 
 class Head extends Component {
   render() {
@@ -9,13 +10,25 @@ class Head extends Component {
           <img src={logo} alt="Logo" id="imageLogo" />
         </div>
         <nav>
-       <ul>
-         <li><a href="/#">Home</a></li>
-         <li><a href="/#">Our Menu</a></li>
-         <li><a href="/#">Our Team</a></li>
-         <li><a href="/#">Reservation Form</a></li>
-       </ul>
-     </nav>
+          <ul>
+            <li>
+              {/* <a href="/#">Home</a> */}
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              {/* <a href="/#">Our Menu</a> */}
+              <NavLink to="/ourMenu">Our Menu</NavLink>
+            </li>
+            <li>
+              {/* <a href="/#">Our Team</a> */}
+              <NavLink to="/ourTeam">Our Team</NavLink>
+            </li>
+            <li>
+              {/* <a href="/#">Reservation Form</a> */}
+              <NavLink to="/reservationForm">Reservation Form</NavLink>
+            </li>
+          </ul>
+        </nav>
 
         <div className="clear"></div>
       </header>
